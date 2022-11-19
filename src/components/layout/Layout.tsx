@@ -1,5 +1,5 @@
 import React from 'react'
-import {LeftBar} from '../../leftBar/LeftBar'
+import MainBox from '../bla/MainBox'
 import { Content } from '../content/Content'
 import { Container, MainContent } from './styles'
 
@@ -8,12 +8,18 @@ export const Layout:React.FC = () => {
 
   return (
 <Container>
+
+
+<MainBox/> 
+
+
 <MainContent>
-<LeftBar/>
-<Content/>
+
+{/* <Content/> */}
                                                 
 </MainContent>
-<h3>new playlist +</h3>
+
+
     </Container>
   )
 }

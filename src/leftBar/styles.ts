@@ -7,8 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   user-select: none;
   background: #121212;
-  width: 300px;
-  min-width: 194px;
+  width: 200px;
 
 `
 
@@ -56,7 +55,7 @@ export const LibraryItem = styled.div`
 
 export const Title = styled.span`
   display: block;
-  font-weight: 100;
+  font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
 
@@ -72,6 +71,10 @@ display:flex;
 flex-direction: column; 
 margin-bottom: 15px;
 height: 225px;
+
+
+
+
 `
 
 interface MenuItemProps{
@@ -88,9 +91,11 @@ export const MenuItem = styled.div<MenuItemProps>`
   cursor: default;
   user-select: none;
 
+
   span {
     text-align: center;
     margin-left: 10px;
+    font-size: 15px; 
   }
   :hover {
     color: #edebeb;
@@ -99,9 +104,14 @@ export const MenuItem = styled.div<MenuItemProps>`
     color: (0.2, '#a8a8a8')};
   }
   img{
-    width:30px;
+    width:20px;
     padding-left: 20px; 
 
+  }
+  svg{
+    width:20px;
+    padding-left: 20px; 
+    fill: white; 
   }
 
 `

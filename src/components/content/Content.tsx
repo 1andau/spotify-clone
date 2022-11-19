@@ -3,12 +3,9 @@ import React from 'react'
 import {
   ContentContainer,
     Header,
-    ArrowsSearchContainer,
-    Profile,
     ContentBody,
     ContentTitle,
-    SearchBar,
-    SeachBarInput,
+
     Category,
     CategoryTitle,
     CategoryContainer,
@@ -16,12 +13,24 @@ import {
     FixedTopBar
 } from './styles'; 
 
+type CatergoryItemProps = {
+  imgUrl: string
+  title: string
+  description: string
+}
 
-interface CatergoryItemProps {
-    imgUrl: string
-    title: string
-    description: string
-  }
+
+export const playlistsList: CatergoryItemProps[] = [
+  {
+    description: 'lorem10jedjkwansdsd nzmcx,z', 
+    title: 'Daily mix 1',
+    imgUrl: 'https://v1.popcornnews.ru/k2/news/canvas/577x320/upload/news/401163241352.jpg'
+  },
+]
+
+
+
+
   const CategoryItem: React.FC<CatergoryItemProps> = ({
     imgUrl,
     title,
@@ -29,7 +38,7 @@ interface CatergoryItemProps {
   }) => {
     return (
       <CategoryContainer>
-    <img src="https://v1.popcornnews.ru/k2/news/canvas/577x320/upload/news/401163241352.jpg" alt="image" />
+    <img src={imgUrl}/>
         <b>{title}</b>
         <p>{description}</p>
       </CategoryContainer>
@@ -42,30 +51,7 @@ export const Content:React.FC = () => {
     <div>
 <ContentContainer>
 <Header>
-        <FixedTopBar>
-          <ArrowsSearchContainer>
-            <div>
-              {/* <MdKeyboardArrowLeft size={30} />
-              <MdKeyboardArrowRight color={'#aaa'} size={30} /> */}
-              icon
-            </div>
-            <SearchBar>
-              {/* <FiSearch color={'#000'} size={17} /> */}
-              search
-              <SeachBarInput placeholder="Search"></SeachBarInput>
-            </SearchBar>
-          </ArrowsSearchContainer>
-          
-          <Profile>
-          <img src="https://v1.popcornnews.ru/k2/news/canvas/577x320/upload/news/401163241352.jpg" alt="image" />
-
-            <span>Mateus Pandino</span>
-
-            {/* <MdKeyboardArrowDown size={30} /> */}
-          </Profile>
-        </FixedTopBar>
-
-        <ContentTitle>Home</ContentTitle>
+    <ContentTitle>Home</ContentTitle>
       </Header>
 
 
@@ -73,11 +59,7 @@ export const Content:React.FC = () => {
         <Category>
           <CategoryTitle>
             <span>Shortcuts</span>
-            <div>
-              {/* <MdKeyboardArrowLeft color={'#aaa'} size={30} />
-              <MdKeyboardArrowRight size={30} /> */}
-              ivcon
-            </div>
+      
           </CategoryTitle>
 
           
@@ -87,11 +69,16 @@ export const Content:React.FC = () => {
               title="lofi hip hop"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             ></CategoryItem>
+
+
+
             <CategoryItem
               imgUrl = "https://v1.popcornnews.ru/k2/news/canvas/577x320/upload/news/401163241352.jpg"
               title="lofi hip hop"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             ></CategoryItem>
+
+
             <CategoryItem
               imgUrl = "https://v1.popcornnews.ru/k2/news/canvas/577x320/upload/news/401163241352.jpg"
               title="lofi hip hop"
