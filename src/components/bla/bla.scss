@@ -8,7 +8,6 @@ body{
     background-color: #0a0a0a;
 }
 
-// barra de rolagem
 /* width */
 ::-webkit-scrollbar {
     width: 14px;
@@ -244,70 +243,7 @@ html, body, #app, #principal {
 
 
             // seção inicial (header)
-            #feedHeader {
-                max-width: 1920px;
 
-
-
-
-                
-                #playlistsRecentes {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    padding: 0;
-
-                    li {
-                        list-style-type: none;
-                        width: 32%;
-                        border-radius: 5px;
-                        margin: 7px 0;
-                        cursor: pointer;
-                        transition: background-color .3s ease;
-                        background-color: rgba($color-white, .1);
-                        display: flex;
-                        align-items: center;
-
-                        &:hover {
-                            background-color: rgba($color-white, .3);
-                        }
-
-                        &:hover button.btn {
-                            opacity: 1;
-                            cursor: default;
-                        }
-                        
-                        img {
-                            width: 80px;
-                            height: 80px;
-                            border-radius: 5px 0 0 5px;
-                        }
-
-                        button.btn {
-                            width: 48px;
-                            height: 48px;
-                            border-radius: 24px;
-                            background-color: #1ed760;
-                            transition: opacity .3s ease;
-                            opacity: 0;
-
-                            &:hover {
-                                padding: 1px;
-                                border: 0;
-                            }
-                        }
-
-                        @media only screen and (max-width: 1186px) {
-                            width: 49%;
-
-                            img {
-                                width: 64px;
-                                height: 64px;
-                            }
-                        }
-                    }
-                }
-            }
 
             // secao feed de playlists
             .feedPlaylist {
@@ -579,3 +515,101 @@ html, body, #app, #principal {
         }
     }
 }
+
+
+
+
+
+#feedHeader {
+    max-width: 1220px;
+
+    
+    #playlistsRecentes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            width: 32%;
+            border-radius: 5px;
+            margin: 7px 0;
+            cursor: pointer;
+            transition: background-color .3s ease;
+            background-color: rgba($color-white, .1);
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: rgba($color-white, .3);
+            }
+
+            &:hover button.btn {
+                opacity: 1;
+                cursor: default;
+            }
+            
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 5px 0 0 5px;
+            }
+
+            button.btn {
+                width: 48px;
+                height: 48px;
+                border-radius: 24px;
+                background-color: #1ed760;
+                transition: opacity .3s ease;
+                opacity: 0;
+
+                &:hover {
+                    padding: 1px;
+                    border: 0;
+                }
+            }
+
+            @media only screen and (max-width: 1186px) {
+                width: 49%;
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// .grid-container{
+//     margin: 13px;
+// }
+
+// ul {
+//     list-style-type: none;
+//     padding: 0;
+    
+//   }
+  
+//   .grid-container {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+//     gap: 24px;
+//   }
+  
+//   .grid-item {
+//     background-color: #333;
+  
+//     display: flex;
+//     flex-direction: column;
+//   }
+  
+//   .playlist-image {
+//     max-width: 200px;
+//   }
